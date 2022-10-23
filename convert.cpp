@@ -5,7 +5,7 @@ using namespace std;
 double convert::PolishPrefix(string prefix) {
     
 	stack<double> operand; 
-    int size =prefix.size();
+    int size =prefix.size()-1;
     int operatorsize=0;
     int operandsize=0;
     
@@ -13,8 +13,7 @@ double convert::PolishPrefix(string prefix) {
 
 		if (isdigit(prefix[i])) {
             operandsize++;
-            //operand.push(prefix[i] - '0'); 
-            operand.push(prefix[i] );
+            operand.push(prefix[i]-'0' );
         }
 		else { 
             operatorsize++;
