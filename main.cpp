@@ -5,9 +5,11 @@
 #include <iostream>
 using namespace std;
 int main(){
-    string prefix;
-    getline(cin,prefix);
+    //string prefix;
+    //getline(cin,prefix);
+    string prefix = "*+69-31";
     convert c;
-	cout<< c.PolishPrefix(prefix); 
+    int res=c.PolishPrefix(prefix);
+	cout<< res; 
 	return 0; 
 }

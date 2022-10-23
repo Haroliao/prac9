@@ -5,7 +5,7 @@ using namespace std;
 double convert::PolishPrefix(string prefix) {
     
 	stack<double> operand; 
-    int size = prefix.size() - 1;
+    int size =prefix.size();
     int operatorsize=0;
     int operandsize=0;
     
@@ -34,10 +34,10 @@ double convert::PolishPrefix(string prefix) {
 			if( prefix[i] == '/'){
 			    operand.push(o1 / o2);
             }
-			else{
-                  cout<<"Error"; 
-			    return -1; 
-			}
+			//else{
+               //   cout<<"Error"; 
+			    //return -1; 
+			//}
 		} 
 	} 
     if(operandsize-1!=operatorsize){
@@ -46,5 +46,5 @@ double convert::PolishPrefix(string prefix) {
     }
     else{
         return operand.top(); 
-    }
+   }
 } 
